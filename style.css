@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
 body
@@ -13,7 +14,11 @@ body
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #131313;
+    background:url("./assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .container
@@ -34,9 +39,45 @@ body
     height: 400px;
     margin: 40px;
     background: #232323;
-    border-radius: 20px;
+    border-radius: 10px;
+    margin: auto;
     transform-style: preserve-3d;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
 }
+
+.container .rgb
+{
+    margin: 30px;
+}
+
+.rgb::before {
+    content:"";
+    background: linear-gradient(45deg,
+    #ff0000 0%, 
+    #ff9a00 10%,
+    #d0de21 20%,
+    #4fdc4a 30%, 
+    #3fdad8 40%,
+    #2fc9e2 50%, 
+    #1c7fee 60%, 
+    #5f15f2 70%, 
+    #ba0cf8 80%, 
+    #fb07d9 90%, 
+    #ff0000 100%  )
+    repeat 0% 0% / 300% 100%;
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    filter: blur(16px);
+    animation: rgb 6s linear infinite;
+  }
+  
+  @keyframes rgb 
+  {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+  }
 
 .container .box::before
 {
@@ -85,11 +126,12 @@ body
     transition: 0.5s;
     opacity: 0;
     z-index: 10;
+    text-shadow: 5px 5px 15px rgba(0,0,0,0.9);;
 }
 
 .container .box:hover .name
 {
-    top: 40px;
+    top: 15px;
     opacity: 1;
 }
 
@@ -108,6 +150,7 @@ body
     transition: 0.5s;
     opacity: 0;
     z-index: 10;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
 }
 
 .container .box:hover .buy
@@ -129,7 +172,8 @@ body
     transform-style: preserve-3d;
     z-index: 10;
     opacity: 1;
-    transform: translate3d(-50%, -50%, 50px);
+    transform: translate3d(-50%, -50%, 10px);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
 }
 
 .container .box .product
@@ -137,27 +181,32 @@ body
     position: absolute;
     top: 50%;
     left: 50%;
-    max-width: 300px;
+    max-width: 250px;
     transition: 0.5s;
     z-index: 11;
     transform-style: preserve-3d;
-    transform: translate3d(-50%, -50%, 50px) rotate(-15deg); /* --- */
+    transform: translate3d(-50%, -50%, 10px) rotate(-15deg); /* --- */
 }
 
-.container .box:nth-child(1) .circle,
-.container .box:nth-child(1) .buy
+.container .box:hover .product
+{
+    transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
+}
+
+.container .rgb:nth-child(1) .circle,
+.container .rgb:nth-child(1) .buy
 {
     background: #baf63e;
 }
 
-.container .box:nth-child(2) .circle,
-.container .box:nth-child(2) .buy
+.container .rgb:nth-child(2) .circle,
+.container .rgb:nth-child(2) .buy
 {
-    background: #baf63e;
+    background: #f85546;
 }
 
-.container .box:nth-child(3) .circle,
-.container .box:nth-child(4) .buy
+.container .rgb:nth-child(3) .circle,
+.container .rgb:nth-child(3) .buy
 {
-    background: #baf63e;
+    background: #008f9a;
 }
