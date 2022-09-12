@@ -6,8 +6,8 @@
 ![ezgif-1-bf3caf8922](https://user-images.githubusercontent.com/11997757/189733896-f04a9238-808d-4788-acaa-7b6a801d194a.gif)
 
 
-## Follow me on Youtube Channel (ASMR Programming + Lofi):
-* https://www.youtube.com/channel/UC5dNGzdstAm3nq0u3M3gvlA
+## Follow me on Youtube Channel:
+* ASMR Programming + Lofi: https://www.youtube.com/channel/UC5dNGzdstAm3nq0u3M3gvlA
 
 ### 😀 Tutorial:
 * ASMR Programming - Coding a Animated 3D Card with RGB (Javascript / Tiltjs) - No Talking: https://www.youtube.com/watch?v=4bUUTJ1taLA&t=382s
